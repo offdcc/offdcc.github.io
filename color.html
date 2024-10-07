@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Guessing Game</title>
+  <link rel="stylesheet" href="color.css">
+</head>
+<body>
+  <div class="start-screen">
+    <button id="start-button">Start</button>
+  </div>
+  <div id="display-container" class="hide">
+    <div class="header flex-space">
+      <div class="title">
+        <p>Color Guessing Game</p>
+      </div>
+      <div class="timer">
+        <span>Time: <span id="time-remaining">30</span>s</span>
+      </div>
+    </div>
+    <div id="container">
+      <div class="question-color">
+        <p id="color-to-guess">Guess the Color: ???</p>
+      </div>
+      <div class="button-container"></div>
+        <button class="option-div" id="option-1"></button>
+        <button class="option-div" id="option-2"></button>
+        <button class="option-div" id="option-3"></button>
+        <button class="option-div" id="option-4"></button>
+      </div>
+    </div>
+    <div class="flex-space">
+      <div class="number-of-count">
+        <span>Question <span class="number-of-questions">1</span> of 5</span>
+      </div>
+      <div id="next-button" class="hide">Next</div>
+    </div>
+  </div>
+  <div class="score-container hide">
+    <div id="user-score">
+      <p>Your Score: <span id="score">0</span></p>
+    </div>
+    <button id="restart">Restart</button>
+  </div>
+
+  <script src="color.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Guessing Game</title>
+  <link rel="stylesheet" href="color.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Color Guessing Game</h1>
+    <div id="game-area" class="hide">
+      <p>Guess the color: <span id="color-code"></span></p>
+      <div class="colors">
+        <div class="color-box" id="color1"></div>
+        <div class="color-box" id="color2"></div>
+        <div class="color-box" id="color3"></div>
+      </div>
+      <p id="timer">Time left: <span id="time">10</span> seconds</p>
+    </div>
+    <button id="start-button">Start Game</button>
+    <p id="message"></p>
+    <script src="color.js"></script>
+  </div>
+</body>
+</html>
