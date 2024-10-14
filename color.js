@@ -84,24 +84,26 @@ function generateColors() {
 
 
 function checkColor(selectedColor) {
-    const selectedHexColor = rgbToHex(selectedColor);
-    if (selectedColor === correctColor) {
-      message.textContent = 'You Win!';
-      clearInterval(countdown);
-      resetGame();
-    } else {
-      message.textContent = 'Wrong color! Try again!';
-    }
+  const selectedHexColor = rgbToHex(selectedColor);
+  if (selectedHexColor === correctColor) { 
+    message.textContent = 'You Win!';
+    clearInterval(countdown);
+    resetGame();
+  } else {
+    message.textContent = 'Wrong color! Try again!';
   }
-  function rgbToHex(rgb){
-    let rgbValues = rgb.replace('rgb(', '').replace(')', '').split(', ');
-    let hexColor = '#';
-    for (let i = 0; i < 3; i++){
-        let hex = parseInt(rgbValues[i]).toString(16);
-        hexColor += hex.length == 1 ? '0' + hex : hex;
-        }
-        return hexColor.toUpperCase();
+}
+
+function rgbToHex(rgb) {
+  let rgbValues = rgb.replace('rgb(', '').replace(')', '').split(', ');
+  let hexColor = '#';
+  for (let i = 0; i < 3; i++) {
+    let hex = parseInt(rgbValues[i]).toString(16);
+    hexColor += hex.length == 1 ? '0' + hex : hex;
   }
+  return hexColor.toUpperCase();
+}
+
 
   function startTimer() {
     timeLeft = 10;
